@@ -10,8 +10,8 @@ jobs:
   test:
     env:
       MONGODB_CLUSTER_ADDRESS: firstdatabase.izcrq.mongodb.net
-      MONGODB_USERNAME: norman33
-      MONGODB_PASSWORD: g5HP0MGOh9CexDPJ
+      MONGODB_USERNAME: ${{ secrets.GITHUB_TOKEN.MONGODB_USERNAME_SEC }}
+      MONGODB_PASSWORD: ${{ secrets.GITHUB_TOKEN.MONGODB_PASSWORD }}
       PORT: 8080
     environment: testing
     runs-on: ubuntu-latest
